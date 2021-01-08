@@ -1,0 +1,39 @@
+＃自動化はしていないので基本的に手動で叩いていく
+
+cd ~/
+defaults write com.apple.finder AppleShowAllFiles TRUE
+killall Finder
+
+mkdir Work
+
+git init
+
+#homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+brew doctor
+echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.profile
+
+brew install dbeaver-community
+brew install --cask adoptopenjdk
+brew install visual-studio-code
+
+
+
+
+
+
+mkdir ~/.ssh/
+chmod 700 ~/.ssh/
+
+#configデータをコピペしておいて作業
+vim ~/.ssh/config
+
+#事前に公開鍵をWorkとかに落としておいて作業
+mv Work/id_rsa .ssh/
+
+chmod 700 ~/.ssh/id_rsa
+cd ~/
+git clone git@github.com:miz-nos/dotfiles.git
+
+sh install.sh
