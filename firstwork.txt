@@ -1,28 +1,58 @@
 ＃自動化はしていないので基本的に手動で叩いていく
 
+#キー配列設定
+https://book.mynavi.jp/macfan/detail_summary/id=27298
+
 cd ~/
 defaults write com.apple.finder AppleShowAllFiles TRUE
 killall Finder
 
-mkdir Work
+#全てのアプリケーションを許可
+sudo spctl --master-disable
 
 git init
+
+mkdir Work
 
 #homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-brew doctor
-echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.profile
 
+brew update
 brew install dbeaver-community
 brew install --cask adoptopenjdk
 brew install visual-studio-code
+brew install pyenv
+brew install nodebrew
+brew install phpbrew
+brew install renv
+brew install rbenv
+brew install direnv
+brew install git-secrets
+git secrets --register-aws --global
+
+# phpbrew
+brew install autoconf pkg-config
+brew install bison re2c
+curl -L -O https://github.com/phpbrew/phpbrew/releases/latest/download/phpbrew.phar
+chmod +x phpbrew.phar
+sudo mv phpbrew.phar /usr/local/bin/phpbrew
+phpbrew init
+source ~/.phpbrew/bashrc
+brew install composer
+
+# nodebrew
+#https://qiita.com/kyosuke5_20/items/c5f68fc9d89b84c0df09
+nodebrew ls-remote
+mkdir -p ~/.nodebrew/src
+nodebrew install-binary v12.13.0
+nodebrew use v12.13.0
 
 
 
 
 
-
+#ssh
 mkdir ~/.ssh/
 chmod 700 ~/.ssh/
 
@@ -37,3 +67,30 @@ cd ~/
 git clone git@github.com:miz-nos/dotfiles.git
 
 sh install.sh
+
+
+echo 'export PATH="/usr/local/sbin:$PATH"' >> /Users/mizunos/.bashrc
+
+source ~/.bashrc
+
+
+#vim
+mkdir -p ~/.cache/dein
+cd ~/.cache/dein
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+
+#ここでやる必要はないがhistoryに覚えさせておく
+vim ~/.vimrc
+#ここで表示される設定をコピペ
+sh ./installer.sh ~/.cache/dein
+
+#vimに貼る
+#set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim　かどうか確認
+
+
+
+#ショートカット設定　書式なし貼り付け
+https://decoy284.net/mac-command-v-paste-and-match-style/
+
+#プリンタ設定
+https://jira.next-group.jp/wiki/pages/viewpage.action?pageId=73536511

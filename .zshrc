@@ -1,12 +1,8 @@
-# .bashrc
+# .zshrc
 
-# Source global definitions
-#if [ -f /etc/bashrc ]; then
-#	. /etc/bashrc
-#fi
 
 #入力停止・再開をオフ
-#stty -ixon -ixoff
+stty -ixon -ixoff
 
 
 # default:cyan / root:red
@@ -19,6 +15,8 @@ fi
 #export
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+#miz-nos for keelctl
 export GITHUB_TOKEN=7dc03c148bb4533cd2bb504b4d7515a846a3e841
 
 # User specific aliases and functions
@@ -51,3 +49,4 @@ cdls ()
 }
 alias  cd="cdls"
 
+export PATH="/usr/local/opt/bison/bin:$PATH"
