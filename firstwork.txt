@@ -78,6 +78,11 @@ source ~/.bashrc
 ## VScodeで　salesforcedx-vscode-apex.java.homeを検索し、パス設定に例のようなディレクトリの場所を指定
 ## /Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home
 
+#microsoft remote desktop
+cp -r ~/Downloads/ ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Preferences/com.microsoft.rdc.macos.plist
+cp -r ~/Downloads/ ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Application\ Support/Microsoft\ Remote\
+
+
 #dbeaver接続設定をダウンロードして設置
 cp -r ~/Downloads/.dbeaver/ ~/Library/DBeaverData/workspace6/General/
 
