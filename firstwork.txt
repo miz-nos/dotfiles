@@ -14,7 +14,7 @@ git init
 
 mkdir Work
 
-#homebrew インストール完了後のメッセージのパス設定が必要
+#homebrew ＊インストール完了後のメッセージのパス設定が必要
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 
@@ -69,15 +69,12 @@ chmod 700 ~/.ssh/id_rsa
 cd ~/
 git clone git@github.com:miz-nos/dotfiles.git
 
-sh install.sh
-
-
 echo 'export PATH="/usr/local/sbin:$PATH"' >> /Users/mizunos/.bashrc
-
 source ~/.bashrc
 
-#dbeaver接続設定ファイルの場所
-~/Library/DBeaverData/workspace6/General/.dbeaver
+
+#dbeaver接続設定をダウンロードして設置
+cp -r ~/Downloads/.dbeaver/ ~/Library/DBeaverData/workspace6/General/
 
 
 #ショートカット設定　書式なし貼り付け
@@ -90,6 +87,9 @@ https://jira.next-group.jp/wiki/pages/viewpage.action?pageId=73536511
 
 
 #vimを使うのであれば
+#dotfilesディレクトリ
+sh install.sh
+
 mkdir -p ~/.cache/dein
 cd ~/.cache/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
