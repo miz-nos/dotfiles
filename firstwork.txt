@@ -79,7 +79,17 @@ source ~/.bashrc
 #dbeaver接続設定ファイルの場所
 ~/Library/DBeaverData/workspace6/General/.dbeaver
 
-#vim
+
+#ショートカット設定　書式なし貼り付け
+https://decoy284.net/mac-command-v-paste-and-match-style/
+
+#プリンタ設定
+https://jira.next-group.jp/wiki/pages/viewpage.action?pageId=73536511
+
+
+
+
+#vimを使うのであれば
 mkdir -p ~/.cache/dein
 cd ~/.cache/dein
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
@@ -91,11 +101,3 @@ sh ./installer.sh ~/.cache/dein
 
 #vimに貼る
 #set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim　かどうか確認
-
-
-
-#ショートカット設定　書式なし貼り付け
-https://decoy284.net/mac-command-v-paste-and-match-style/
-
-#プリンタ設定
-https://jira.next-group.jp/wiki/pages/viewpage.action?pageId=73536511
