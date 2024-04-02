@@ -73,6 +73,11 @@ echo 'export PATH="/usr/local/sbin:$PATH"' >> /Users/mizunos/.bashrc
 source ~/.bashrc
 
 
+
+#VScodeのJDK設定
+## VScodeで　salesforcedx-vscode-apex.java.homeを検索し、パス設定に例のようなディレクトリの場所を指定
+## /Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home
+
 #dbeaver接続設定をダウンロードして設置
 cp -r ~/Downloads/.dbeaver/ ~/Library/DBeaverData/workspace6/General/
 
