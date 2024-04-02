@@ -14,22 +14,25 @@ git init
 
 mkdir Work
 
-#homebrew
+#homebrew インストール完了後のメッセージのパス設定が必要
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 
 brew update
 brew install dbeaver-community
+#VScodeに必要なJDK
 brew install --cask adoptopenjdk
 brew install visual-studio-code
+brew install git-secrets
+git secrets --register-aws --global
+
 brew install pyenv
 brew install nodebrew
 brew install phpbrew
 brew install renv
 brew install rbenv
 brew install direnv
-brew install git-secrets
-git secrets --register-aws --global
+
 
 # phpbrew
 brew install autoconf pkg-config
@@ -73,6 +76,8 @@ echo 'export PATH="/usr/local/sbin:$PATH"' >> /Users/mizunos/.bashrc
 
 source ~/.bashrc
 
+#dbeaver接続設定ファイルの場所
+~/Library/DBeaverData/workspace6/General/.dbeaver
 
 #vim
 mkdir -p ~/.cache/dein
