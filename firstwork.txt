@@ -80,7 +80,7 @@ source ~/.bashrc
 
 #microsoft remote desktop
 cp -r ~/Downloads/ ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Preferences/com.microsoft.rdc.macos.plist
-cp -r ~/Downloads/ ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Application\ Support/Microsoft\ Remote\
+cp -r ~/Downloads/Microsoft\ Remote\ Desktop/ ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Application\ Support/Microsoft\ Remote\ Desktop/
 
 
 #dbeaver接続設定をダウンロードして設置
