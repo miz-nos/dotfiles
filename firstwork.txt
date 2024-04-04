@@ -79,7 +79,9 @@ source ~/.bashrc
 ## VScodeで　salesforcedx-vscode-apex.java.homeを検索し、パス設定に例のようなディレクトリの場所を指定
 ## /Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home
 
-#microsoft remote desktop
+
+
+#microsoft remote desktop　これだと上手く移行できなかったので、rdcファイルをエクスポート→インポートするとよい
 cp -r ~/Downloads/remotedesktop/com.microsoft.rdc.macos.plist ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Preferences/com.microsoft.rdc.macos.plist
 cp -r ~/Downloads/remotedesktop/Microsoft\ Remote\ Desktop/ ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Application\ Support/Microsoft\ Remote\ Desktop/
 
