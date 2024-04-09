@@ -89,6 +89,8 @@ cp -r ~/Downloads/remotedesktop/Microsoft\ Remote\ Desktop/ ~/Library/Containers
 #dbeaver接続設定をダウンロードして設置
 cp -r ~/Downloads/.dbeaver/ ~/Library/DBeaverData/workspace6/General/
 
+#Salesforce CLI
+https://developer.salesforce.com/docs/atlas.ja-jp.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm#sfdx_setup_install_cli_macos
 
 #ショートカット設定　書式なし貼り付け
 https://decoy284.net/mac-command-v-paste-and-match-style/
