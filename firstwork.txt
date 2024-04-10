@@ -14,14 +14,31 @@ git init
 
 mkdir Work
 
+
+#JDKインストール zulu11 M2はarm64
+https://docs.azul.com/core/install/macos?_gl=1*1s1o4w0*_ga*MTA4OTA1MjEzOC4xNzEyNzE0ODMz*_ga_42DEGWGYD5*MTcxMjcxNDgzMy4xLjEuMTcxMjcxNTU5Mi40MS4wLjA.#install-using-a-dmg-installer
+
+#VScodeのJDK設定
+## VScodeで　salesforcedx-vscode-apex.java.homeを検索し、パス設定に例のようなディレクトリの場所を指定
+/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+
+#Salesforce CLI
+https://developer.salesforce.com/docs/atlas.ja-jp.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm#sfdx_setup_install_cli_macos
+
+#Salesforce dataloader
+https://developer.salesforce.com/docs/atlas.ja-jp.dataLoader.meta/dataLoader/loader_install_mac.htm
+
+
+
+
 #homebrew ＊インストール完了後のメッセージのパス設定が必要
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 
 brew update
 brew install dbeaver-community
-#VScodeに必要なJDK
-brew install --cask adoptopenjdk
+#VScodeに必要なJDK  java11をインストールしたいのでこのコマンドは使わない
+# brew install --cask adoptopenjdk
 brew install visual-studio-code
 brew install microsoft-remote-desktop
 brew install git-secrets
@@ -54,8 +71,6 @@ nodebrew use v12.13.0
 
 
 
-
-
 #ssh
 mkdir ~/.ssh/
 chmod 700 ~/.ssh/
@@ -75,11 +90,6 @@ source ~/.bashrc
 
 
 
-#VScodeのJDK設定
-## VScodeで　salesforcedx-vscode-apex.java.homeを検索し、パス設定に例のようなディレクトリの場所を指定
-## /Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home
-
-
 
 #microsoft remote desktop　これだと上手く移行できなかったので、rdcファイルをエクスポート→インポートするとよい
 cp -r ~/Downloads/remotedesktop/com.microsoft.rdc.macos.plist ~/Library/Containers/com.microsoft.rdc.macos/Data/Library/Preferences/com.microsoft.rdc.macos.plist
@@ -89,8 +99,7 @@ cp -r ~/Downloads/remotedesktop/Microsoft\ Remote\ Desktop/ ~/Library/Containers
 #dbeaver接続設定をダウンロードして設置
 cp -r ~/Downloads/.dbeaver/ ~/Library/DBeaverData/workspace6/General/
 
-#Salesforce CLI
-https://developer.salesforce.com/docs/atlas.ja-jp.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm#sfdx_setup_install_cli_macos
+
 
 #ショートカット設定　書式なし貼り付け
 https://decoy284.net/mac-command-v-paste-and-match-style/
