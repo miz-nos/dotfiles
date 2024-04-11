@@ -37,7 +37,7 @@ https://developer.salesforce.com/docs/atlas.ja-jp.dataLoader.meta/dataLoader/loa
 
 brew update
 brew install dbeaver-community
-#VScodeに必要なJDK  java11をインストールしたいのでこのコマンドは使わない
+#JDK  java11をインストールしたいのでこのコマンドは使わない
 # brew install --cask adoptopenjdk
 brew install visual-studio-code
 brew install microsoft-remote-desktop
