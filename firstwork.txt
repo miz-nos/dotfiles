@@ -39,6 +39,10 @@ brew install gnupg
 brew install git-secrets
 git secrets --register-aws --global
 
+brew install amazon-q
+# AppのAmaQのGUIから認証　https://d-95671baee2.awsapps.com/start     ap-northeast-1
+brew install kiro
+
 brew install pyenv
 brew install nodebrew
 brew install phpbrew
@@ -112,7 +116,7 @@ https://jira.next-group.jp/wiki/pages/viewpage.action?pageId=73536511
 
 
 
-#vimを使うのであれば
+#vimを使うのであれば ------------------------
 #dotfilesディレクトリ
 sh install.sh
 
