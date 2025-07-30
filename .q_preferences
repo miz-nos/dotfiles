@@ -14,7 +14,7 @@ PREFERRED_EDITOR=code
 GITHUB_READ_METHOD=gh_command
 
 # Atlassian MCP Server設定
-# トークンの取得方法: https://jira.next-group.jp/wiki/display/PLANALL/02_03_MCP
+# トークンの取得方法: https://jira.next-group.jp/wiki/pages/viewpage.action?pageId=475077373
 # 実際のトークンは環境変数または別の安全な場所に保存してください
 CONFLUENCE_PERSONAL_ACCESS_TOKEN=${CONFLUENCE_PERSONAL_ACCESS_TOKEN}
 JIRA_PERSONAL_ACCESS_TOKEN=${JIRA_PERSONAL_ACCESS_TOKEN}
