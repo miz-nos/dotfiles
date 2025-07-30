@@ -1,0 +1,30 @@
+# Amazon Q 設定ファイル
+# 作成日: 2025-07-30
+
+# パッケージ管理
+PACKAGE_MANAGER=homebrew
+
+# 作業ディレクトリ
+WORK_DIR=/Users/mizunos/Work
+
+# エディタ（必要に応じて変更）
+PREFERRED_EDITOR=code
+
+# GitHubソースコード読み取り
+GITHUB_READ_METHOD=gh_command
+
+# Atlassian MCP Server設定
+# トークンの取得方法: https://jira.next-group.jp/wiki/display/PLANALL/02_03_MCP
+# 実際のトークンは環境変数または別の安全な場所に保存してください
+CONFLUENCE_PERSONAL_ACCESS_TOKEN=${CONFLUENCE_PERSONAL_ACCESS_TOKEN}
+JIRA_PERSONAL_ACCESS_TOKEN=${JIRA_PERSONAL_ACCESS_TOKEN}
+
+# LIFULL MCP Servers設定
+# サーバー情報: http://lifull-mcps.k8s.dev.nxin.jp/
+# 利用可能なサーバー:
+# - db-explorer: データベース探索ツール
+# - frontend-recipes: フロントエンド開発レシピ
+# - prompts-server: 共通プロンプトとワークフロー (Minokudo コードレビュー、TDD等)
+
+# その他の設定
+# 追加の設定項目があれば以下に記載
